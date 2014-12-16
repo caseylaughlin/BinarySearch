@@ -27,9 +27,18 @@ public class BinaryTracingGame
 			counter = counter + 3;
 					play();
 			}
-		else if(leftGuess == left && rightGuess == right && middleGuess != middle)
+		else if(leftGuess == left && rightGuess == right && middleGuess != middle || leftGuess == left && rightGuess != right && middleGuess == middle || leftGuess != left && rightGuess == right && middleGuess == middle)
 			{
 			counter = counter + 2;
+			play();
+			}
+		else if(leftGuess == left && rightGuess != right && middleGuess != middle || leftGuess != left && rightGuess == right && middleGuess != middle || leftGuess != left && rightGuess != right && middleGuess == middle )
+			{
+			counter++;
+			play();
+			}
+		else
+			{
 			play();
 			}
 		}
